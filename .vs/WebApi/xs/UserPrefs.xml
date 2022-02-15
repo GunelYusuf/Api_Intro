@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{6B453D4D-DD99-4D36-9797-E8789778CF12}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="WebApi/Controllers/ProductController.cs">
     <Files>
-      <File FileName="WebApi/Controllers/ProductController.cs" Line="37" Column="42" />
-      <File FileName="WebApi/Data/Entity/Product.cs" />
+      <File FileName="WebApi/Controllers/ProductController.cs" Line="51" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,9 +11,7 @@
               <Node name="Controllers" expanded="True">
                 <Node name="ProductController.cs" selected="True" />
               </Node>
-              <Node name="Data" expanded="True">
-                <Node name="Entity" expanded="True" />
-              </Node>
+              <Node name="Data" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
           </Node>

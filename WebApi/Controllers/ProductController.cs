@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Data.DAL;
 using WebApi.Data.Entity;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,17 +14,18 @@ namespace WebApi.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        private readonly Context _context;
 
-        public static List<Product> products = new List<Product> {
-            new Product { Id = 1, Name = "blauzer", Price = 250 },
-            new Product { Id = 2, Name = "skirt", Price = 340 },
-            new Product { Id = 3, Name = "body", Price = 700 } };
+        public ProductController(Context context)
+        {
+            _context = context;
+        }
 
         // GET: api/values
         [HttpGet]
         public List<Product> Get()
         {
-            return products;
+            return _context.Products.ToList();
         }
 
         // GET api/values/5
@@ -31,28 +33,44 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult GetOne(int id)
         {
-            Product product = products.FirstOrDefault(p => p.Id == id);
+            Product product = _context.Products.FirstOrDefault(p => p.Id == id);
             if (product == null) return StatusCode(404);
 
-            return StatusCode(200,product) ;
+            return StatusCode(200, product);
         }
 
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+
+        public IActionResult Create(Product product)
         {
+            _context.Products.Add(product);
+            _context.SaveChanges();
+            return StatusCode(201);
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut ("{id}")]
+
+        public IActionResult Update(int id,Product product)
         {
+            if (id==null) return NotFound();
+            Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (dbProduct == null) return NotFound();
+            dbProduct.Name = product.Name;
+            dbProduct.Price = product.Price;
+            _context.SaveChanges();
+            return StatusCode(200);
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+
+        public IActionResult Delete(int id)
         {
+            if (id == null) return NotFound();
+            Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (dbProduct == null) return NotFound();
+            _context.Products.Remove(dbProduct);
+            return StatusCode(202);
         }
+
     }
 }
