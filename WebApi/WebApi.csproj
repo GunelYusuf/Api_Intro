@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Data\DAL\" />
+    <None Remove="Data\Entity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Data\DAL\" />
+    <Folder Include="Data\Entity\" />
+  </ItemGroup>
+</Project>

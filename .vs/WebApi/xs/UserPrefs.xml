@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{6B453D4D-DD99-4D36-9797-E8789778CF12}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebApi/Controllers/ProductController.cs">
+    <Files>
+      <File FileName="WebApi/Controllers/ProductController.cs" Line="37" Column="42" />
+      <File FileName="WebApi/Data/Entity/Product.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebApi" expanded="True">
+            <Node name="WebApi" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="ProductController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True">
+                <Node name="Entity" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WebApi PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
