@@ -77,8 +77,7 @@ namespace WebApi.Controllers
             Category isExistCategory = _context.Categories.FirstOrDefault(c => c.Id == category.Id);
             if (isExist && (isExistCategory.Name.ToLower() == category.Name.ToLower().Trim()))
             {
-                ModelState.AddModelError("Name", "The category with this name already exists");
-                View();
+               return StatusCode(401);
             }
             {
                 isExistCategory.Name = category.Name;

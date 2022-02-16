@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Data.DAL;
 using WebApi.Data.Entity;
 
@@ -21,23 +22,23 @@ namespace WebApi.Controllers
             _context = context;
         }
 
-        // GET: api/values
-        //[HttpGet]
-        //public List<Product> Get()
-        //{
-        //    return _context.Products.ToList();
-        //}
+       [HttpGet]
+       public IActionResult Get()
+        {
+            List<Product> product = _context.Products.Include(c => c.Category).Take(3).ToList();
+            return StatusCode(200, product);
+        }
 
-        //// GET api/values/5
-        //[Route("{id}")]
-        //[HttpGet]
-        //public IActionResult GetOne(int id)
-        //{
-        //    Product product = _context.Products.FirstOrDefault(p => p.Id == id);
-        //    if (product == null) return StatusCode(404);
+        // GET api/values/5
+        [Route("{id}")]
+        [HttpGet]
+        public IActionResult GetOne(int id)
+        {
+            Product product = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (product == null) return StatusCode(404);
 
-        //    return StatusCode(200, product);
-        //}
+            return StatusCode(200, product);
+        }
 
         //[HttpPost]
 
@@ -72,6 +73,6 @@ namespace WebApi.Controllers
         //    _context.SaveChanges();
         //    return StatusCode(202);
         //}
-        
+
     }
 }

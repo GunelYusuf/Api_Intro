@@ -12,11 +12,15 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="ProductDto\" />
+    <None Remove="Data\Configuration\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Data\DAL\" />
     <Folder Include="Data\Entity\" />
+    <Folder Include="ProductDto\" />
+    <Folder Include="Data\Configuration\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
