@@ -1,19 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApi.Data.Entity
 {
-    public class Product
+    public class Category
     {
         public int Id { get; set; }
 
         [Required(ErrorMessage = "don't leave empty")]
+
         public string Name { get; set; }
 
-        public double Price { get; set; }
+        [MinLength(10, ErrorMessage = "Must be less than 100")]
 
-        public int CategoryId { get; set; }
+        public string Description { get; set; }
 
-        public Category Category { get; set; }
+        public ICollection<Product> Products { get; set; }
     }
 }

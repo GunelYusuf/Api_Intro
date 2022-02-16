@@ -22,55 +22,56 @@ namespace WebApi.Controllers
         }
 
         // GET: api/values
-        [HttpGet]
-        public List<Product> Get()
-        {
-            return _context.Products.ToList();
-        }
+        //[HttpGet]
+        //public List<Product> Get()
+        //{
+        //    return _context.Products.ToList();
+        //}
 
-        // GET api/values/5
-        [Route("{id}")]
-        [HttpGet]
-        public IActionResult GetOne(int id)
-        {
-            Product product = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (product == null) return StatusCode(404);
+        //// GET api/values/5
+        //[Route("{id}")]
+        //[HttpGet]
+        //public IActionResult GetOne(int id)
+        //{
+        //    Product product = _context.Products.FirstOrDefault(p => p.Id == id);
+        //    if (product == null) return StatusCode(404);
 
-            return StatusCode(200, product);
-        }
+        //    return StatusCode(200, product);
+        //}
 
-        [HttpPost]
+        //[HttpPost]
 
-        public IActionResult Create(Product product)
-        {
-            _context.Products.Add(product);
-            _context.SaveChanges();
-            return StatusCode(201);
-        }
+        //public IActionResult Create(Product product)
+        //{
+        //    _context.Products.Add(product);
+        //    _context.SaveChanges();
+        //    return StatusCode(201);
+        //}
 
-        [HttpPut ("{id}")]
+        //[HttpPut ("{id}")]
 
-        public IActionResult Update(int id,Product product)
-        {
-            if (id==null) return NotFound();
-            Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (dbProduct == null) return NotFound();
-            dbProduct.Name = product.Name;
-            dbProduct.Price = product.Price;
-            _context.SaveChanges();
-            return StatusCode(200);
-        }
+        //public IActionResult Update(int id,Product product)
+        //{
+        //    if (id==null) return NotFound();
+        //    Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+        //    if (dbProduct == null) return NotFound();
+        //    dbProduct.Name = product.Name;
+        //    dbProduct.Price = product.Price;
+        //    _context.SaveChanges();
+        //    return StatusCode(200);
+        //}
 
-        [HttpDelete("{id}")]
+        //[HttpDelete("{id}")]
 
-        public IActionResult Delete(int id)
-        {
-            if (id == null) return NotFound();
-            Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (dbProduct == null) return NotFound();
-            _context.Products.Remove(dbProduct);
-            return StatusCode(202);
-        }
-
+        //public IActionResult Delete(int id)
+        //{
+        //    if (id == null) return NotFound();
+        //    Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+        //    if (dbProduct == null) return NotFound();
+        //    _context.Products.Remove(dbProduct);
+        //    _context.SaveChanges();
+        //    return StatusCode(202);
+        //}
+        
     }
 }
