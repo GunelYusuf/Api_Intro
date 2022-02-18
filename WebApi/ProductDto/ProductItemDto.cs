@@ -1,4 +1,6 @@
 ﻿using System;
+using WebApi.Data.Entity;
+
 namespace WebApi.ProductDto
 {
     public class ProductItemDto

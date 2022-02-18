@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "SpCirGOjoCnXfPEi1xOWLTL6TPHgct2PMjyI92ragW+/YqHEr0bTh3Yd6ZvWARXMhDxAMfvMGCAi3Ozdh1SDwQ==",
+  "dgSpecHash": "Ao3X8guKpDg9PZgv48yHXBMDdfTmBrr3t6AQaszHG+rB0JhLjfZavkvROd8UmfxB1TCQ6NUqriidVEzAHFCtnw==",
   "success": true,
   "projectFilePath": "/Users/gunelyusubova/Projects/WebApi/WebApi/WebApi.csproj",
   "expectedPackageFiles": [
+    "/Users/gunelyusubova/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
+    "/Users/gunelyusubova/.nuget/packages/fluentvalidation.aspnetcore/10.3.6/fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "/Users/gunelyusubova/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.3.6/fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "/Users/gunelyusubova/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.0/microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "/Users/gunelyusubova/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "/Users/gunelyusubova/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,5 +1,4 @@
-﻿using System;
-namespace WebApi.ProductDto
+﻿namespace WebApi.ProductDto
 {
     public class ProductUpdateDto
     {

@@ -8,5 +8,10 @@ namespace WebApi.ProductDto
         public int TotalCount { get; set; }
 
         public List<ProductItemDto> Items { get; set; }
+
+        public ProductReturnDto()
+        {
+            Items = new List<ProductItemDto>();
+        }
     }
 }
