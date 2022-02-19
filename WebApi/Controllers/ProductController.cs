@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Data.DAL;
 using WebApi.Data.Entity;
+using WebApi.Helper;
 using WebApi.ProductDto;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -17,10 +19,12 @@ namespace WebApi.Controllers
     public class ProductController : ControllerBase
     {
         private readonly Context _context;
+        private readonly IWebHostEnvironment _env;
 
-        public ProductController(Context context)
+        public ProductController(Context context,IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
 
 
@@ -56,12 +60,19 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(ProductCreateDto productCreateDto)
+        public IActionResult Create([FromForm]ProductCreateDto productCreateDto)
         {
+            if (!(productCreateDto.Photo.IsImage()&& productCreateDto.Photo.MaxLength(700)))
+            {
+                return BadRequest("Please,choose normal photo");
+            }
+            string url = _env.ContentRootPath;
+            string fileName = productCreateDto.Photo.SaveImg(_env.ContentRootPath,"Images/Product").Result;
             Product newProduct = new Product
             {
                 Name = productCreateDto.Name,
                 Price = productCreateDto.Price,
+                ImageUrl = fileName,
                 IsDelete = productCreateDto.IsDelete
             };
 

@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Http;
 
 namespace WebApi.ProductDto
 {
@@ -9,6 +10,8 @@ namespace WebApi.ProductDto
         public decimal Price { get; set; }
 
         public bool IsDelete { get; set; }
+
+        public IFormFile Photo { get; set; }
 
     }
 

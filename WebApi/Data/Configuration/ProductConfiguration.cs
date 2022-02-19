@@ -14,6 +14,7 @@ namespace WebApi.Data.Configuration
             builder.Property(p => p.Price).IsRequired().HasColumnType("decimal(18,2)");
             //builder.Property(p => p.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
             builder.Property(p => p.CreatedAt).HasDefaultValue(DateTime.UtcNow);
+            builder.Property(p => p.ImageUrl).HasMaxLength(100);
         }
     }
 }
