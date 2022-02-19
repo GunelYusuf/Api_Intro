@@ -10,6 +10,10 @@ namespace WebApi.ProductDto
 
         public decimal Price { get; set; }
 
+        public decimal Benefit { get; set; }
+
+        public string LocationUrl { get; set; }
+
         public bool IsDelete { get; set; }
 
         public DateTime CreatedAt { get; set; }

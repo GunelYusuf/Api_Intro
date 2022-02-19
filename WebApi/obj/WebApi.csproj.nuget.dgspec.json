@@ -14,7 +14,7 @@
         "outputPath": "/Users/gunelyusubova/Projects/WebApi/WebApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gunelyusubova/.nuget/NuGet/NuGet.Config"
+          "/Users/gunelyusubova/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -38,6 +38,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[10.3.6, )"

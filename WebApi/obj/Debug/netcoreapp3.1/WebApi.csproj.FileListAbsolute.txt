@@ -5,6 +5,8 @@
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/WebApi.runtimeconfig.dev.json
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/WebApi.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/WebApi.pdb
+/Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/AutoMapper.dll
+/Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/FluentValidation.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/FluentValidation.AspNetCore.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/FluentValidation.DependencyInjectionExtensions.dll
@@ -16,9 +18,13 @@
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+/Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+/Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
 /Users/gunelyusubova/Projects/WebApi/WebApi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll

@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebApi.Data.DAL;
+using WebApi.Mapper;
 using WebApi.ProductDto;
 
 namespace WebApi
@@ -37,6 +38,11 @@ namespace WebApi
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("default"));
             });
+
+            services.AddAutoMapper(opt =>
+            {
+                opt.AddProfile(new MapperProfile());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +52,8 @@ namespace WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
 
